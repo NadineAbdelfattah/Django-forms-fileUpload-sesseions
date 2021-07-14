@@ -1,0 +1,19 @@
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Create a profile</title>
+    <link rel="stylesheet" href="{% static 'profiles/styles.css' %} " />
+  </head>
+
+  <body>
+    <form action="/profiles/" method= "POST" enctype="multipart/form-data">
+    {% csrf_token %}
+        {{ form }}
+        <button>Upload!</button>
+    </form>
+  </body>
+</html>
